@@ -34,5 +34,19 @@ const paraElements = createParaText(10);
 
 paraElements.forEach((el) => container.appendChild(el));
 console.log(container, bgImage);
-document.body.appendChild(bgImage)
-document.body.appendChild(container)
+document.body.appendChild(bgImage);
+document.body.appendChild(container);
+
+// target
+const bgImageEl = document.getElementById("bg-image");
+
+// add event
+window.addEventListener("scroll", () => {
+  updateImage();
+});
+
+function updateImage() {
+  bgImageEl.style.opacity = 1 - window.pageYOffset / 900;
+  bgImageEl.style.backgroundSize = 160 - window.pageYOffset/12 + "%";
+ 
+}

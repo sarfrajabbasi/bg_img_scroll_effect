@@ -12,6 +12,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size:160%;
+    /* background-repeat: no-repeat; */
     
 }
 .container{
